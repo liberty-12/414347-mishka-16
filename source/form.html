@@ -31,9 +31,33 @@
     </header>
 
     <main>
-      <h1 class="title">Каталог товаров</h1>
+      <h1 class="title">Вязание на заказ</h1>
 
+      <p class="description">
+        Мы будем рады воплотить в жизнь ваши пожелания!
+        Заполние простую форму заказа и мы свяжемся с вами,
+        чтобы уточнить детали.
+      </p>
 
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="order-form__type">
+          <legend class="order-form__title">Тип</legend>
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <label>
+                <input class="order-form__input order-form__input--radio" name="type" id="type" />
+                Аксессуар для интерьера
+              </label>
+            </li>
+            <li class="order-form__item">
+              <label>
+                <input class="order-form__input order-form__input--radio" name="type" id="type" />
+                Детская игрушка
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
     </main>
 
     <footer>
