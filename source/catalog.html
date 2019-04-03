@@ -5,8 +5,82 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="page-header__logo-link" href="index.html">
+        <img class="page-header__logo-image" src="" width="" height="" alt="Логотип Mishka" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__nav-list">
+          <li class="main-nav__item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__user-list">
+          <li class="main-nav__item main-nav__item--loupe">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item main-nav__item--cart">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main>
+      <h1 class="title">Каталог товаров</h1>
+
+    </main>
+
+    <footer>
+      <section class="social">
+        <div class="social__wrapper">
+          <h2 class="social__title visually-hidden">Социальные сети</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="developers">
+        <div class="developers__wrapper">
+          <h2 class="developers__title">Разработано</h2>
+          <a class="developers__link" href="https://htmlacademy.ru/intensive/adaptive">HTMLAcademy</a>
+        </div>
+      </section>
+    </footer>
+
+    <section class="cart-popup">
+      <h2 class="cart-popup__title">Добавить в корзину</h2>
+      <span class="cart-popup__text">Выберите размер:</span>
+      <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="cart-popup__size-list">
+          <li class="cart-popup__size-item">
+            <input class="cart-popup__size" type="radio" name="size" id="size_s">
+            <label for="size_s">S</label>
+          </li>
+          <li class="cart-popup__size-item">
+            <input class="cart-popup__size" type="radio" name="size" id="size_m">
+            <label for="size_m">M</label>
+          </li>
+          <li class="cart-popup__size-item">
+            <input class="cart-popup__size" type="radio" name="size"  id="size_l">
+            <label for="size_m">L</label>
+          </li>
+        </ul>
+        <a class="cart-popup__button button" href="#">Добавить</a>
+      </form>
+    </section>
 
   </body>
 </html>
