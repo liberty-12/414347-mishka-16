@@ -127,23 +127,25 @@
 
     <section class="cart-popup">
       <h2 class="cart-popup__title">Добавить в корзину</h2>
-      <span class="cart-popup__text">Выберите размер:</span>
       <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post">
-        <ul class="cart-popup__size-list">
-          <li class="cart-popup__size-item">
-            <input class="cart-popup__size" type="radio" name="size" id="size_s">
-            <label for="size_s">S</label>
-          </li>
-          <li class="cart-popup__size-item">
-            <input class="cart-popup__size" type="radio" name="size" id="size_m">
-            <label for="size_m">M</label>
-          </li>
-          <li class="cart-popup__size-item">
-            <input class="cart-popup__size" type="radio" name="size"  id="size_l">
-            <label for="size_l">L</label>
-          </li>
-        </ul>
-        <a class="cart-popup__button button" href="#">Добавить</a>
+        <fieldset class="cart-popup__size">
+          <legend class="cart-popup__heading">Выберите размер:</legend>
+          <ul class="cart-popup__size-list">
+            <li class="cart-popup__size-item">
+              <input class="cart-popup__size" type="radio" name="size" id="size_s">
+              <label class="cart-popup__label" for="size_s">S</label>
+            </li>
+            <li class="cart-popup__size-item">
+              <input class="cart-popup__size" type="radio" name="size" id="size_m">
+              <label class="cart-popup__label" for="size_m">M</label>
+            </li>
+            <li class="cart-popup__size-item">
+              <input class="cart-popup__size" type="radio" name="size"  id="size_l">
+              <label class="cart-popup__label" for="size_l">L</label>
+            </li>
+          </ul>
+          <button class="cart-popup__button button" type="submit">Добавить</button>
+        </fieldset>
       </form>
     </section>
 
