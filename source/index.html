@@ -3,32 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
       <div class="header__wrapper">
         <div class="logo">
           <a class="logo__link">
-            <img class="logo__image" src="" width="" height="" alt="Логотип Mishka" />
+            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka" />
           </a>
         </div>
       </div>
-      <button class="header__toggle" type="button">Открыть меню</button>
+      <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
       <nav class="navigation">
         <ul class="navigation__nav-list">
           <li class="navigation__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="navigation__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navigation__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="navigation__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="navigation__user-list">
           <li class="navigation__item navigation__item--loupe">
-            <a href="#">Поиск по сайту</a>
+            <a class="navigation__link" href="#">Поиск по сайту</a>
           </li>
           <li class="navigation__item navigation__item--cart">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="navigation__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -84,7 +85,7 @@
                 </td>
               </tr>
             </table>
-            <img class="best-product__image" src="" width="" height="" alt="Вязаные корзинки" />
+            <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки" />
             <span class="best-product__price">Цена: 990 руб.</span>
             <a class="best-product__button button" href="#">Заказать</a>
         </div>
@@ -117,8 +118,8 @@
               <b class="reviews__author">Анастасия Красильникова</b>
               <a class="reviews__address" href="#">@misssssiskras</a>
             </div>
-            <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__button reviews__button--next" type="button">Следующий отзыв</button>
+            <button class="reviews__page-button reviews__page-button--prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="reviews__page-button reviews__page-button--next" type="button" aria-label="Следующий отзыв"></button>
             <a class="reviews__button button" href="#">Написать</a>
         </div>
       </section>
@@ -128,11 +129,11 @@
           <h2 class="contacts__title">Контакты</h2>
           <span class="contacts__value">e-mail:</span>
           <p class="contacts__field">
-            <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
+            <a class="contacts__link contacts__link--email" href="#">info@mimimishkashop.ru</a>
           </p>
           <span class="contacts__value">адрес:</span>
           <p class="contacts__field">
-            <a class="contacts__address-link" href="#">
+            <a class="contacts__link contacts__link--address" href="#">
               г. Санкт-петербург, ул. Большая Конюшенная, д.19/8, офис 101
             </a>
           </p>
@@ -149,13 +150,13 @@
           <h2 class="social__title visually-hidden">Социальные сети</h2>
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
             </li>
           </ul>
         </section>
@@ -174,16 +175,16 @@
           <legend class="cart-popup__heading">Выберите размер:</legend>
           <ul class="cart-popup__size-list">
             <li class="cart-popup__size-item">
-              <input class="cart-popup__size" type="radio" name="size" id="size_s">
-              <label for="size_s">S</label>
+              <input class="cart-popup__size" type="radio" name="size" id="size_s" checked>
+              <label class="cart-popup__label" for="size_s">S</label>
             </li>
             <li class="cart-popup__size-item">
               <input class="cart-popup__size" type="radio" name="size" id="size_m">
-              <label for="size_m">M</label>
+              <label class="cart-popup__label" for="size_m">M</label>
             </li>
             <li class="cart-popup__size-item">
               <input class="cart-popup__size" type="radio" name="size"  id="size_l">
-              <label for="size_l">L</label>
+              <label class="cart-popup__label" for="size_l">L</label>
             </li>
           </ul>
           <button class="cart-popup__button button" type="submit">Добавить</button>
