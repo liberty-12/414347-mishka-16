@@ -14,9 +14,59 @@
 }
 
 .about__item {
+  padding-top: 85px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 1.18;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .about__title {
+    font-size: 43px;
+    line-height: 1.16;
+  }
+
+  .about__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 530px;
+  }
+
+  .about__item {
+    padding-top: 100px;
+
+    width: 315px;
+
+    font-size: 20px;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
+
+  .about__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 530px;
+  }
+
+  .about__item {
+    padding-top: 100px;
+
+    width: 315px;
+
+    font-size: 20px;
+    line-height: 1.1;
+  }
 }
