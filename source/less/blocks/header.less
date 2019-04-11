@@ -1,8 +1,33 @@
+.header__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 .header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   width: 20px;
   height: 14px;
 
   border: none;
   background-color: none;
   background-image: url("../img/icon-menu-open.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .header__wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .header__toggle {
+    display: none;
+  }
 }
