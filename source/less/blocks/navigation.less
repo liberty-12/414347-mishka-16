@@ -32,10 +32,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .navigation {
-    flex-direction: column;
-  }
-
   .navigation__nav-list,
   .navigation__user-list {
     flex-direction: row;
@@ -44,6 +40,27 @@
 
   .navigation__nav-list {
     order: 2;
+  }
+
+  .navigation__item {
+    margin-right: 30px;
+  }
+
+  .navigation__link {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 1150px
+  }
+
+  .navigation__nav-list {
+    order: 0;
   }
 
   .navigation__item {
