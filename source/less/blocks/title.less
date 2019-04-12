@@ -1,4 +1,5 @@
 .title {
+  padding: 0 30px;
   padding-top: 70px;
 
   width: 322px;
@@ -11,7 +12,6 @@
 
 .title__title {
   margin: 0;
-  padding: 0 39px;
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 27px;
@@ -19,6 +19,20 @@
   line-height: 1.11;
   text-align: center;
   color: @very-dark-brown;
+}
+
+.title--catalog {
+  width: 320px;
+  height: 177px;
+
+  padding: 0;
+
+  background-color: #f1f1f1;
+  background-image: none;
+}
+
+.title--catalog .title__title {
+  padding-top: 74px;
 }
 
 @media (min-width: @tablet-width) {
@@ -44,6 +58,20 @@
     text-align: center;
     color: #000000;
   }
+
+  .title--catalog {
+    width: 768px;
+    height: 226px;
+
+    padding: 0;
+
+    background-color: #f1f1f1;
+    background-image: none;
+  }
+
+  .title--catalog .title__title {
+    padding-top: 105px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -67,5 +95,19 @@
     line-height: 1.08;
     text-align: center;
     color: #000000;
+  }
+
+  .title--catalog {
+    width: 1150px;
+    height: 255px;
+
+    padding: 0;
+
+    background-color: #f1f1f1;
+    background-image: none;
+  }
+
+  .title--catalog .title__title {
+    padding-top: 105px;
   }
 }
