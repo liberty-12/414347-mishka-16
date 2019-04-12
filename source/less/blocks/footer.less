@@ -1,0 +1,28 @@
+.footer__wrapper {
+  padding-top: 25px;
+
+  background-color: #f1f1f1;
+}
+
+.footer__wrapper .logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper .logo {
+    position: static;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 50px;
+    padding-top: 51px;
+  }
+}
