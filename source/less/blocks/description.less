@@ -1,6 +1,24 @@
 .description {
+  margin: 0;
+  padding: 30px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.85;
   color: @greyish-brown;
+}
+
+@media (min-width: @tablet-width) {
+  .description {
+    padding: 60px 50px;
+
+    font-size: 17px;
+    line-height: 1.76;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description {
+    padding: 112px 225px 60px;
+  }
 }
