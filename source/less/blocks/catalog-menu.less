@@ -1,3 +1,9 @@
+.catalog-menu__wrapper {
+  width: 320px;
+
+  margin: 0 auto;
+}
+
 .catalog-menu__list {
   margin: 0;
   padding: 0;
@@ -33,9 +39,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-menu {
+  .catalog-menu__wrapper {
+    width: @tablet-width;
+
+    margin: 0 auto;
     margin-top: -119px;
-    margin-left: 50px;
+    padding-left: 50px;
   }
 
   .catalog-menu__list {
@@ -49,6 +58,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog-menu__wrapper {
+    width: @desktop-width;
+
+    margin: 0 auto;
+  }
+
   .catalog-menu__item {
     width: 525px;
   }

@@ -1,4 +1,7 @@
-.reviews {
+.reviews__wrapper {
+  width: 320px;
+
+  margin: 0 auto;
   padding: 0 30px;
 }
 
@@ -63,16 +66,23 @@
 
     display: flex;
 
-    padding: 0 50px;
-
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 -50px;
   }
 
+  .reviews__wrapper {
+
+
+    width: @tablet-width;
+
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
   .reviews__button-container {
     position: absolute;
-    right: 0;
+    right: 20px;
     bottom: 0;
   }
 
@@ -83,15 +93,20 @@
   .reviews__button {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
+    background-position: 0 -225px;
+  }
+
+  .reviews__wrapper {
+    width: @desktop-width;
+
+    margin: 0 auto;
     padding: 0 50px;
     padding-left: 225px;
-
-    background-position: 0 -225px;
   }
 }
