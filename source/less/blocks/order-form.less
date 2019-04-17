@@ -1,8 +1,21 @@
+.order-form {
+  width: 320px;
+
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
 .order-form__block {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+
   border: none;
 }
 
 .order-form__title {
+  margin-bottom: 25px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
@@ -39,6 +52,9 @@
 }
 
 .order-form__textarea {
+  width: 252px;
+  height: 140px;
+
   border: 2px solid #000000;
 
   &::placeholder {
@@ -57,6 +73,94 @@
 }
 
 .order-form__button {
-  padding: 20px 47px;
+  padding: 20px 45px;
   background-color: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: @tablet-width;
+
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .order-form__block {
+    position: relative;
+
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+
+  .order-form__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .order-form__list {
+    padding-left: 167px;
+  }
+
+  .order-form__input--tel,
+  .order-form__input--email,
+  .order-form__textarea {
+    margin-left: 167px;
+  }
+
+  .order-form__label {
+    font-size: 19px;
+    line-height: 0.95;
+  }
+
+  .order-form__textarea {
+    width: 501px;
+    height: 142px;
+  }
+
+  .order-form__info {
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form {
+    width: @desktop-width;
+
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  .order-form__list {
+    padding-left: 125px;
+  }
+
+  .order-form__input--tel,
+  .order-form__input--email,
+  .order-form__textarea {
+    margin-left: 125px;
+  }
+
+  .order-form__textarea {
+    width: 700px;
+  }
+
+  .order-form__button {
+    margin-left: 125px;
+  }
+
+  .order-form__info {
+    right: 225px;
+  }
 }

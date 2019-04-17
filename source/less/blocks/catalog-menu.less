@@ -1,3 +1,9 @@
+.catalog-menu__wrapper {
+  width: 320px;
+
+  margin: 0 auto;
+}
+
 .catalog-menu__list {
   margin: 0;
   padding: 0;
@@ -21,8 +27,8 @@
 .catalog-menu__link {
   display: inline-block;
 
-  width: 320px;
-  height: 103px;
+  // width: 320px;
+  // height: 103px;
 
   text-decoration: none;
   font-family: "OpenSans", "Arial", sans-serif;
@@ -30,4 +36,35 @@
   font-weight: 700;
   line-height: 1.26;
   color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-menu__wrapper {
+    width: @tablet-width;
+
+    margin: 0 auto;
+    margin-top: -119px;
+    padding-left: 50px;
+  }
+
+  .catalog-menu__list {
+    display: flex;
+  }
+
+  .catalog-menu__item {
+    width: 334px;
+    height: 119px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-menu__wrapper {
+    width: @desktop-width;
+
+    margin: 0 auto;
+  }
+
+  .catalog-menu__item {
+    width: 525px;
+  }
 }

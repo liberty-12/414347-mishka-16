@@ -1,9 +1,29 @@
+.cart-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 320px;
+
+  margin: 0 auto;
+  padding: 0 30px;
+
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+}
+
 .cart-popup__title {
+  margin-bottom: 25px;
+  padding: 0 50px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 25px;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
+  text-align: center;
   color: #000000;
 }
 
@@ -15,6 +35,8 @@
 }
 
 .cart-popup__heading {
+  margin-bottom: 25px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 2;
@@ -22,7 +44,10 @@
 }
 
 .cart-popup__size-list {
+  display: flex;
+
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
 
   list-style: none;
@@ -37,6 +62,8 @@
 }
 
 .cart-popup__button {
+  margin-bottom: 46px;
+
   border-color: @seafoam-blue;
   background-color: @seafoam-blue;
   color: #ffffff;

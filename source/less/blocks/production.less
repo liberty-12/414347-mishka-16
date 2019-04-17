@@ -1,4 +1,13 @@
+.production {
+  width: 320px;
+
+  margin: 0 auto;
+  padding: 30px;
+}
+
 .production__title {
+  padding-left: 91px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
@@ -6,7 +15,15 @@
   color: #000000;
 }
 
+.production__img {
+  width: 260px;
+  height: 150px;
+}
+
 .production__text {
+  padding-left: 34px;
+  padding-right: 43px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.85;
@@ -15,4 +32,89 @@
 
 .production__button {
   padding: 16px 26px;
+  margin-left: 34px;
+}
+
+@media (min-width: @tablet-width) {
+  .production {
+    display: flex;
+    flex-direction: column;
+
+    width: @tablet-width;
+
+    margin: 0 auto;
+    margin-bottom: 63px;
+    padding: 50px;
+  }
+
+  .production__img {
+    width: 668px;
+    height: 455px;
+  }
+
+  .production__title {
+    order: 1;
+
+    padding-left: 107px;
+
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .production__text {
+    order: 2;
+
+    padding-left: 40px;
+    padding-right: 47px;
+
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .production__button {
+    order: 2;
+
+    padding: 20px 222px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: @desktop-width;
+
+    margin: 0 auto;
+    margin-bottom: 105px;
+    padding: 50px;
+    padding-left: 811px;
+  }
+
+  .production__img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+
+    width: 682px;
+    height: 455px;
+  }
+
+  .production__title {
+    padding-left: 0;
+    padding-right: 140px;
+  }
+
+  .production__text {
+    padding-left: 0;
+    padding-right: 67px;
+  }
+
+  .production__button {
+    margin: 0;
+    padding: 17px 45px;
+  }
 }
