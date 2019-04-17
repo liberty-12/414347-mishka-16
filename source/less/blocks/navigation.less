@@ -14,13 +14,15 @@
   list-style: none;
 }
 
+.navigation__item {
+  border-top: 1px solid #ececec;
+}
 
 .navigation__link {
   display: block;
 
-  padding: 30px 0;
-
-  border-top: 1px solid #ececec;
+  margin-left: 76px;
+  padding: 25px 0;
 
   text-decoration: none;
   font-family: "OpenSans", "Arial", sans-serif;
@@ -29,6 +31,117 @@
   line-height: 1.41;
   letter-spacing: normal;
   color: #000000;
+
+  &:hover, &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.navigation__user-list .navigation__link {
+  position: relative;
+
+  margin-left: 30px;
+  padding-left: 46px;
+}
+
+.navigation__icon--loupe {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  z-index: 2;
+
+  width: 18px;
+  height: 18px;
+
+  opacity: 0.2;
+}
+
+.navigation__icon--cart {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  z-index: 2;
+
+  width: 21px;
+  height: 19px;
+
+  opacity: 0.2;
+}
+
+.navigation__toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  width: 21px;
+  height: 20px;
+
+  border: none;
+  background-color: #ffffff;
+
+  cursor: pointer;
+}
+
+.navigation--closed .navigation__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 20px;
+  height: 14px;
+
+  background-image: url("../img/icon-menu-open.svg");
+  background-position: center;
+}
+
+.navigation--opened .navigation__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 21px;
+  height: 20px;
+
+  background-image: url("../img/icon-menu-close.svg");
+  background-position: center;
+}
+
+@media (max-width: @mobile-width-only) {
+  .navigation--closed .navigation__nav-list {
+    display: none;
+  }
+
+  .navigation--closed .navigation__user-list {
+    display: none;
+  }
+
+  .navigation--opened .navigation__nav-list {
+    display: flex;
+  }
+
+  .navigation--opened .navigation__user-list {
+    display: flex;
+  }
+
+  .navigation--nojs .navigation__toggle {
+    display: none;
+  }
+
+  .navigation--nojs .navigation__nav-list {
+    display: flex;
+  }
+
+  .navigation--nojs .navigation__user-list {
+    display: flex;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -48,6 +161,10 @@
 
   .navigation__link {
     border: none;
+  }
+
+  .navigation__toggle {
+    display: none;
   }
 }
 
@@ -69,5 +186,9 @@
 
   .navigation__link {
     border: none;
+  }
+
+  .navigation__toggle {
+    display: none;
   }
 }
