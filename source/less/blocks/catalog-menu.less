@@ -12,6 +12,8 @@
 }
 
 .catalog-menu__item {
+  position: relative;
+
   width: 320px;
   height: 103px;
 
@@ -22,13 +24,17 @@
   &--right-green {
     background-color: @greeny-blue;
   }
+
+  &:hover {
+    height: 108px;
+  }
 }
 
 .catalog-menu__link {
   display: inline-block;
 
-  // width: 320px;
-  // height: 103px;
+  padding: 30px;
+  padding-right: 180px;
 
   text-decoration: none;
   font-family: "OpenSans", "Arial", sans-serif;
@@ -36,6 +42,42 @@
   font-weight: 700;
   line-height: 1.26;
   color: #ffffff;
+
+  &:hover {
+    padding-top: 25px;
+  }
+}
+
+.catalog-menu__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &--interior {
+    top: 23px;
+    right: 36px;
+
+    width: 40px;
+    height: 62px;
+  }
+
+  &--toy {
+    top: 21px;
+    right: 27px;
+
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.catalog-menu__item:hover .catalog-menu__icon {
+  &--interior {
+    top: 18px;
+  }
+
+  &--toy {
+    top: 16px;
+  }
 }
 
 @media (min-width: @tablet-width) {
