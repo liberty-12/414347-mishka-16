@@ -1,13 +1,34 @@
+.best-product {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -36px;
+
+    width: 100%;
+    height: 6px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
 .best-product__wrapper {
   width: 320px;
 
   margin: 0 auto;
+  margin-bottom: 70px;
   padding: 0 30px;
   padding-top: 30px;
 }
 
 .best-product__title {
   margin: 0;
+  margin-bottom: 8px;
   padding: 0;
 
   font-family: "OpenSans", "Arial", sans-serif;
@@ -18,6 +39,10 @@
 }
 
 .best-product__subtitle {
+  display: block;
+
+  margin-bottom: 30px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
@@ -29,17 +54,54 @@
 .best-product__description,
 .best-product__value,
 .best-product__field {
+  margin: 0;
+  padding: 0;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 1.6;
   color: @greyish-brown;
 }
 
+.best-product__description {
+  margin-bottom: 30px;
+}
+
+.best-product__parameters {
+  margin-bottom: 28px;
+}
+
+.best-product__item {
+  display: block;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.best-product__value {
+  width: 78px;
+
+  padding: 10px 0;
+  padding-right: 10px;
+}
+
+.best-product__field {
+  width: 182px;
+
+  padding: 10px 0;
+}
+
 .best-product__image {
+  margin-bottom: 28px;
+
   background-position: center;
 }
 
 .best-product__price {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
