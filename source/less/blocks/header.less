@@ -9,12 +9,32 @@
   margin: 0 auto;
 }
 
+.header__info {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .header__wrapper {
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     width: 768px;
+  }
+
+  .header__info {
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    z-index: 2;
+
+    display: block;
+
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: right;
+    color: @greyish-brown;
   }
 }
 
