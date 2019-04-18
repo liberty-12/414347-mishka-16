@@ -13,6 +13,14 @@
   color: #000000;
 }
 
+.contacts__block {
+  display: flex;
+}
+
+.contacts__block {
+  margin-bottom: 40px;
+}
+
 .contacts__value,
 .contacts__link {
   font-family: "OpenSans", "Arial", sans-serif;
@@ -25,13 +33,30 @@
   text-decoration: none;
 }
 
+.contacts__value {
+  display: block;
+
+  padding-right: 32px;
+}
+
+.contacts__field {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__block:first-child .contacts__field {
+  border-bottom: 1px solid #62d1ba;
+}
+
 .contacts__map {
   margin-left: -30px;
+  margin-bottom: 39px;
 
   border: none;
 }
 
 .contacts__button {
+  margin-bottom: 39px;
   padding: 20px 53px;
 }
 
