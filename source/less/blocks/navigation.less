@@ -152,15 +152,47 @@
   }
 
   .navigation__nav-list {
-    order: 2;
+    position: absolute;
+    top: 95px;
+    left: 50px;
   }
 
-  .navigation__item {
-    margin-right: 30px;
+  .navigation__nav-list .navigation__item {
+    margin-right: 37px;
+  }
+
+  .navigation__item--loupe {
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  .navigation__item--loupe .navigation__link {
+    padding-left: 52px;
+
+    font-size: 0;
+  }
+
+  .navigation__nav-list .navigation__link {
+    margin: 0;
+    padding: 25px 0;
+
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
   }
 
   .navigation__link {
+    padding: 35px 0;
     border: none;
+  }
+
+  .navigation__icon--loupe {
+    top: 36px;
+    left: 3px;
+  }
+
+  .navigation__icon--cart {
+    top: 35px;
   }
 
   .navigation__toggle {
