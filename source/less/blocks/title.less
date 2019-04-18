@@ -1,5 +1,4 @@
 .title {
-  // width: 322px;
   height: 285px;
 
   background-color: #f9f9f9;
@@ -49,11 +48,30 @@
 
 @media (min-width: @tablet-width) {
   .title {
+    position: relative;
+
     height: 576px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center 0;
     background-repeat: no-repeat;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
 
   .title__wrapper {
