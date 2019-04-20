@@ -183,14 +183,32 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    background-position: 0 -225px;
+    margin-bottom: 161px;
+
+    background-position: 50px 0;
+
+    &::after {
+      left: 0;
+      bottom: -95px;
+    }
   }
 
   .reviews__wrapper {
     width: @desktop-width;
 
     margin: 0 auto;
-    padding: 0 50px;
     padding-left: 225px;
+    padding-right: 107px;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
+
+  .reviews__text {
+    margin: 0;
+    margin-bottom: 49px;
+    padding: 0;
   }
 }
