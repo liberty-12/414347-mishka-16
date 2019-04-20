@@ -210,15 +210,40 @@
   }
 
   .navigation__nav-list {
-    order: 0;
+    position: static;
+  }
+
+  .navigation__item--first {
+    border-right: 1px solid #ececec;
   }
 
   .navigation__item {
-    margin-right: 30px;
+    margin-right: 0;
+  }
+
+  .navigation__nav-list .navigation__item {
+    margin-right: 0;
   }
 
   .navigation__link {
     border: none;
+  }
+
+  .navigation__nav-list .navigation__link {
+    padding: 35px;
+
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.46;
+  }
+
+  .navigation__item--first .navigation__link {
+    padding-left: 0;
+  }
+
+  .navigation__item--loupe .navigation__link {
+    padding: 35px 30px;
+    // padding-right: 30px;
   }
 
   .navigation__toggle {
