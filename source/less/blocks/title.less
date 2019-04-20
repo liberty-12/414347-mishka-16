@@ -117,9 +117,16 @@
 
 @media (min-width: @desktop-width) {
   .title {
+    height: 746px;
+
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position: center 0;
     background-repeat: no-repeat;
+
+    &::after {
+      left: 0;
+      bottom: -5px;
+    }
   }
 
   .title__wrapper {
