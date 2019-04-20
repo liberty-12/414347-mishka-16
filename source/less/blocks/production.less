@@ -5,7 +5,15 @@
   padding: 30px;
 }
 
+.production__wrapper {
+  box-shadow: 0 0 0 1px #ececec;
+}
+
 .production__title {
+  position: relative;
+
+  margin: 0;
+  padding: 27px 0;
   padding-left: 91px;
 
   font-family: "OpenSans", "Arial", sans-serif;
@@ -13,6 +21,25 @@
   font-weight: 700;
   line-height: 1.41;
   color: #000000;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 35px;
+    left: 34px;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.production__video {
+  margin-bottom: 34px;
 }
 
 .production__img {
@@ -21,6 +48,8 @@
 }
 
 .production__text {
+  margin: 0;
+  margin-bottom: 29px;
   padding-left: 34px;
   padding-right: 43px;
 
@@ -31,8 +60,9 @@
 }
 
 .production__button {
-  padding: 16px 26px;
   margin-left: 34px;
+  margin-bottom: 33px;
+  padding: 16px 26px;
 }
 
 @media (min-width: @tablet-width) {
