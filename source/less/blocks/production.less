@@ -39,7 +39,24 @@
 }
 
 .production__video {
+  position: relative;
+
   margin-bottom: 34px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 37px;
+    left: 80px;
+
+    width: 101px;
+    height: 77px;
+
+    background-image: url("../img/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .production__img {
