@@ -153,16 +153,21 @@
   .production {
     position: relative;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
     width: @desktop-width;
 
     margin: 0 auto;
     margin-bottom: 105px;
-    padding: 50px;
-    padding-left: 811px;
+    padding: 0 50px;
+    padding-left: 732px;
+  }
+
+  .production__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-top: 42px;
+    padding-left: 80px;
   }
 
   .production__video {
@@ -177,17 +182,27 @@
   }
 
   .production__title {
-    padding-left: 0;
+    margin: 0;
+    margin-bottom: 27px;
+    padding: 0;
+    padding-top: 53px;
     padding-right: 140px;
+
+    &::after {
+      top: 0;
+      left: 0;
+    }
   }
 
   .production__text {
+    margin-bottom: 51px;
     padding-left: 0;
-    padding-right: 67px;
+    padding-right: 65px;
   }
 
   .production__button {
     margin: 0;
+    margin-bottom: 54px;
     padding: 17px 45px;
   }
 }
