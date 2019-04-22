@@ -1,4 +1,4 @@
-.order-form {
+.order-form__center {
   width: 320px;
 
   margin: 0 auto;
@@ -69,20 +69,20 @@
 
 .order-form__input--checkbox,
 .order-form__input--radio {
-position: absolute;
+  position: absolute;
 
-width: 1px;
-height: 1px;
+  width: 1px;
+  height: 1px;
 
-margin: -1px;
-padding: 0;
+  margin: -1px;
+  padding: 0;
 
-border: 0;
+  border: 0;
 
-white-space: nowrap;
-clip-path: inset(100%);
-clip: rect(0 0 0 0);
-overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .order-form__input--radio + .order-form__label::before {
@@ -248,7 +248,13 @@ overflow: hidden;
 }
 
 @media (min-width: @tablet-width) {
-  .order-form {
+  .order-form__wrapper {
+    width: 100%;
+
+    background-color: #f1f1f1;
+  }
+
+  .order-form__center {
     position: relative;
 
     display: flex;
@@ -269,15 +275,20 @@ overflow: hidden;
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
-    padding-top: 69px;
+    padding-top: 50px;
 
     &::after {
       display: none;
     }
   }
 
-  .order-form__block:first-child {
+  .order-form__block--type {
     padding: 0;
+  }
+
+  .order-form__item:last-child,
+  .order-form__block--color .order-form__item:nth-last-child(2) {
+    margin: 0;
   }
 
   .order-form__title {
@@ -286,7 +297,7 @@ overflow: hidden;
     left: 52px;
   }
 
-  .order-form__block:first-child .order-form__title {
+  .order-form__block--type .order-form__title {
     top: 0;
   }
 
@@ -305,8 +316,8 @@ overflow: hidden;
     line-height: 0.95;
   }
 
-  .order-form__block--color {
-    background-color: #f1f1f1;
+  .order-form__block--color .order-form__title {
+    top: 50px;
   }
 
   .order-form__block--color .order-form__list {
@@ -323,7 +334,7 @@ overflow: hidden;
   }
 
   .order-form__block--name .order-form__title {
-    top: 89px;
+    top: 70px;
   }
 
   .order-form__block--name .order-form__list {
@@ -363,12 +374,11 @@ overflow: hidden;
   }
 
   .order-form__block--phone .order-form__title {
-    top: 90px;
+    top: 70px;
   }
 
   .order-form__block--email {
     padding-top: 0;
-    padding-bottom: 50px;
   }
 
   .order-form__block--email .order-form__title {
@@ -378,8 +388,6 @@ overflow: hidden;
   .order-form__block--email,
   .order-form__block--phone {
     width: 100%;
-
-    background-color: #f1f1f1;
   }
 
   .order-form__input--email,
@@ -391,11 +399,11 @@ overflow: hidden;
   }
 
   .order-form__block--additional {
-    padding-top: 0;
+    padding-top: 50px;
   }
 
   .order-form__block--additional .order-form__title {
-    top: 23px;
+    top: 70px;
   }
 
   .order-form__textarea {
@@ -427,7 +435,7 @@ overflow: hidden;
 }
 
 @media (min-width: @desktop-width) {
-  .order-form {
+  .order-form__center {
     width: @desktop-width;
 
     margin: 0 auto;
