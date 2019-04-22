@@ -125,7 +125,17 @@
                 </td>
               </tr>
             </table>
-            <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки" />
+            <picture>
+              <source media="(min-width: 1150px)"
+                      srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x"
+                      width="525" height="636">
+              <source media="(min-width: 768px)"
+                      srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x"
+                      width="525" height="636">
+              <img class="best-product__image" src="img/triple-set-mobile@1x.jpg"
+                    srcset="img/triple-set-mobile@2x.jpg 2x"
+                    width="260" height="315" alt="Вязаные корзинки" />
+            </picture>
             <span class="best-product__price">Цена: 990 руб.</span>
             <a class="best-product__button button" href="#">Заказать</a>
           </div>
