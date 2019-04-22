@@ -67,6 +67,24 @@
   user-select: none;
 }
 
+.order-form__input--checkbox,
+.order-form__input--radio {
+position: absolute;
+
+width: 1px;
+height: 1px;
+
+margin: -1px;
+padding: 0;
+
+border: 0;
+
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+
 .order-form__input--radio + .order-form__label::before {
   content: "";
 
