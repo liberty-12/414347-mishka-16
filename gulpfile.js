@@ -15,6 +15,9 @@ var webp = require("gulp-webp");
 
 var svgstore = require("gulp-svgstore");
 
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
+
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -56,6 +59,14 @@ gulp.task("sprite", function() {
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"));
 });
+
+gulp.task("posthtml", function() {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("source"));
+})
 
 gulp.task("server", function () {
   server.init({
