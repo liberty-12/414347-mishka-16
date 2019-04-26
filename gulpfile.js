@@ -60,7 +60,7 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("source/img"));
 });
 
-gulp.task("posthtml", function() {
+gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
