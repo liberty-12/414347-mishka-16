@@ -39,6 +39,5 @@
     "node": "8.15"
   },
   "dependencies": {
-    "npm": "^6.9.0"
   }
 }
