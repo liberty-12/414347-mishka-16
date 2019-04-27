@@ -25,9 +25,14 @@
     background-color: @greeny-blue;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     height: 108px;
   }
+}
+
+.catalog-menu__item:active .catalog-menu__link {
+  opacity: 0.3;
 }
 
 .catalog-menu__link {
@@ -102,6 +107,10 @@
       height: 124px;
     }
   }
+
+  .catalog-menu__link {
+    padding-right: 160px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -115,5 +124,9 @@
 
   .catalog-menu__item {
     width: 525px;
+  }
+
+  .catalog-menu__link {
+    padding-right: 330px;
   }
 }
