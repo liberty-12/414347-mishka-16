@@ -43,6 +43,21 @@
 
 .contacts__block:first-child .contacts__field {
   border-bottom: 1px solid #62d1ba;
+
+  &:active {
+    border-color: rgba(70, 193, 174, 0.1);
+  }
+}
+
+.contacts__link--email {
+  &:hover,
+  &:focus {
+    color: @greeny-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__map {
