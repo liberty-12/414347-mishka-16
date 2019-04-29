@@ -1,4 +1,18 @@
 .cart-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  display: inline-block;
+  vertical-align: top;
+
+  transform: translate(-50%, -50%);
+
+  background-color: #ffffff;
+}
+
+.cart-popup__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,16 +49,19 @@
 }
 
 .cart-popup__heading {
+  margin: 0 64px;
   margin-bottom: 25px;
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 2;
+  text-align: center;
   color: @greyish-brown;
 }
 
 .cart-popup__size-list {
   display: flex;
+  justify-content: space-between;
 
   margin: 0;
   margin-bottom: 30px;
@@ -53,12 +70,76 @@
   list-style: none;
 }
 
+.cart-popup__size-item {
+  position: relative;
+}
+
+.cart-popup__input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.cart-popup__input + .cart-popup__label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 52px;
+
+  opacity: 0.1;
+
+  border: 2px solid #444444;
+  background-color: transparent;
+}
+
+.cart-popup__input:checked + .cart-popup__label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 52px;
+
+  opacity: 1;
+
+  border: 2px solid #62d1ba;
+  background-color: transparent;
+}
+
 .cart-popup__label {
+  display: inline-block;
+
+  width: 80px;
+
+  padding: 18px 30px;
+
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 0.94;
+  text-align: center;
   color: @greyish-brown;
+}
+
+.cart-popup__label:hover::before {
+  opacity: 0.3;
 }
 
 .cart-popup__button {
@@ -67,4 +148,15 @@
   border-color: @seafoam-blue;
   background-color: @seafoam-blue;
   color: #ffffff;
+
+  &:hover,
+  &:focus {
+    border-color: @seafoam-blue;
+    background-color: #ffffff;
+    color: @seafoam-blue;
+  }
+
+  &:focus {
+    color: rgba(99, 209, 187, 0.3);
+  }
 }
