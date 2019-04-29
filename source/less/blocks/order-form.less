@@ -123,7 +123,7 @@
   width: 40px;
   height: 40px;
 
-  border: 2px solid #444444;
+  border: 2px solid @greyish-brown;
 }
 
 .order-form__input--checkbox:checked + .order-form__label::after {
@@ -139,6 +139,17 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: -6px 0;
+}
+
+.order-form__label:hover::before,
+.order-form__label:focus::before {
+  border: 2px solid #62d1ba;
+}
+
+.order-form__label:active::before {
+  opacity: 0.3;
+
+  border: 2px solid @greyish-brown;
 }
 
 .order-form__block--name .order-form__item {
@@ -168,10 +179,17 @@
     line-height: 1.06;
     color: @greyish-brown-30;
   }
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+  }
 }
 
 .order-form__block--phone,
 .order-form__block--email {
+  position: relative;
+
   &::after {
     top: -18px;
     right: 0;
@@ -192,16 +210,18 @@
   margin-bottom: 9px;
 }
 
-.order-form__input--tel {
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
+.order-form__icon {
+  position: absolute;
+  top: 15px;
+  right: 0;
+
+  opacity: 0.1;
 }
 
-.order-form__input--email {
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
+.order-form__input:hover + .order-form__icon {
+  fill: #62d1ba;
+
+  opacity: 1;
 }
 
 .order-form__block--additional {
@@ -226,6 +246,15 @@
     font-size: 17px;
     line-height: 1.06;
     color: @greyish-brown-30;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid #62d1ba;
+  }
+
+  &:active {
+    border: 2px solid #62d1ba;
   }
 }
 
@@ -395,7 +424,10 @@
     padding-right: 55px;
 
     background-color: #f1f1f1;
-    background-position: 450px center;
+  }
+
+  .order-form__icon--tel {
+    top: 65px;
   }
 
   .order-form__block--additional {
@@ -462,9 +494,14 @@
     margin-left: 125px;
   }
 
-  .order-form__input--tel,
-  .order-form__input--email {
-    background-position: right center;
+  .order-form__icon--tel {
+    top: 62px;
+    right: 130px;
+  }
+
+  .order-form__icon--email {
+    top: 10px;
+    right: 130px;
   }
 
   .order-form__textarea {
