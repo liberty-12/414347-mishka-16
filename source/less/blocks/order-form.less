@@ -141,15 +141,39 @@
   background-position: -6px 0;
 }
 
-.order-form__label:hover::before,
-.order-form__label:focus::before {
+.order-form__input--radio:hover + .order-form__label::before,
+.order-form__input--radio:checked:hover + .order-form__label::before,
+.order-form__input--checkbox:hover + .order-form__label::before,
+.order-form__input--checkbox:checked:hover + .order-form__label::before,
+.order-form__input--radio:focus + .order-form__label::before,
+.order-form__input--radio:checked:focus + .order-form__label::before,
+.order-form__input--checkbox:focus + .order-form__label::before,
+.order-form__input--checkbox:checked:focus + .order-form__label::before {
   border: 2px solid #62d1ba;
 }
 
-.order-form__label:active::before {
+.order-form__input--radio:active + .order-form__label::before,
+.order-form__input--radio:checked:active + .order-form__label::before,
+.order-form__input--checkbox:active + .order-form__label::before,
+.order-form__input--checkbox:checked:active + .order-form__label::before {
   opacity: 0.3;
 
   border: 2px solid @greyish-brown;
+}
+
+.order-form__input--radio:disabled .order-form__label::before,
+.order-form__input--radio:disabled .order-form__label::after,
+.order-form__input--radio:disabled .order-form__label,
+.order-form__input--checkbox:disabled .order-form__label::before,
+.order-form__input--checkbox:disabled .order-form__label::after,
+.order-form__input--checkbox:disabled .order-form__label,
+.order-form__input--radio:checked:disabled .order-form__label::before,
+.order-form__input--radio:checked:disabled .order-form__label::after,
+.order-form__input--radio:checked:disabled .order-form__label,
+.order-form__input--checkbox:checked:disabled .order-form__label::before,
+.order-form__input--checkbox:checked:disabled .order-form__label::after,
+.order-form__input--checkbox:checked:disabled .order-form__label {
+  opacity: 0.2;
 }
 
 .order-form__block--name .order-form__item {
