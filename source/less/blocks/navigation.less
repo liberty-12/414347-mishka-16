@@ -90,8 +90,8 @@
 
 .navigation__toggle {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 31px;
+  right: 31px;
 
   width: 21px;
   height: 20px;
@@ -172,53 +172,69 @@
     flex-wrap: wrap;
   }
 
+  .navigation__item {
+    border: none;
+  }
+
+  .navigation__link {
+    padding: 29px 0;
+    border: none;
+  }
+
   .navigation__nav-list--add {
     display: none;
   }
 
-  .navigation__nav-list {
-    position: absolute;
-    top: 95px;
-    left: 50px;
-    z-index: 2;
-  }
-
-  .navigation__nav-list .navigation__item {
-    margin-right: 37px;
-  }
-
   .navigation__item--loupe {
+    margin-right: 0;
+
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
   }
 
-  .navigation__item--loupe .navigation__link {
-    padding-left: 52px;
+  .navigation__user-list .navigation__link {
+    margin-left: 0;
+  }
 
+  .navigation__item--loupe .navigation__link {
+    padding: 43px 41px;
     font-size: 0;
+  }
+
+  .navigation__item--cart .navigation__link {
+    margin-left: 38px;
+  }
+
+  .navigation__item--cart .navigation__link {
+    padding-left: 44px;
+  }
+
+  .navigation__icon--loupe {
+    top: 34px;
+    left: 33px;
+  }
+
+  .navigation__icon--cart {
+    top: 32px;
+    left: -7px;
+  }
+
+  .navigation__nav-list {
+    position: absolute;
+    top: 87px;
+    left: 50px;
+    z-index: 2;
   }
 
   .navigation__nav-list .navigation__link {
     margin: 0;
-    padding: 25px 0;
+    margin-right: 21px;
+    padding: 17px 0;
+    padding-right: 15px;
 
     font-size: 15px;
     font-weight: bold;
     line-height: 1.6;
-  }
-
-  .navigation__link {
-    padding: 35px 0;
-    border: none;
-  }
-
-  .navigation__icon--loupe {
-    top: 36px;
-    left: 3px;
-  }
-
-  .navigation__icon--cart {
-    top: 35px;
   }
 
   .navigation__toggle {
@@ -255,7 +271,8 @@
   }
 
   .navigation__nav-list .navigation__link {
-    padding: 35px;
+    margin: 0;
+    padding: 30px 35px;
 
     font-size: 17px;
     font-weight: bold;
@@ -266,9 +283,18 @@
     padding-left: 0;
   }
 
+  .navigation__user-list .navigation__link {
+    margin-left: 0;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
   .navigation__item--loupe .navigation__link {
-    padding: 35px 30px;
-    // padding-right: 30px;
+    padding: 35px 41px;
+  }
+
+  .navigation__item--cart {
+    margin-left: 38px;
   }
 
   .navigation__nav-list--add {
@@ -276,7 +302,7 @@
     flex-direction: row;
 
     position: absolute;
-    top: 96px;
+    top: 85px;
     left: 50px;
   }
 
@@ -285,7 +311,7 @@
   }
 
   .navigation__nav-list--add .navigation__link {
-    padding: 24px 30px;
+    padding: 18px 30px;
 
     font-family: "OpenSans", "Arial", sans-serif;
     font-size: 15px;
