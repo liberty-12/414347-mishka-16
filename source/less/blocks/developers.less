@@ -1,18 +1,53 @@
 .developers {
   display: flex;
   justify-content: center;
+
+  padding-bottom: 20px;
 }
 
-.developers__title {
+.developers__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-width: 190px;
+
   margin: 0;
-  margin-right: 30px;
   padding: 0;
-  padding-top: 6px;
-  padding-bottom: 8px;
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 19px;
   font-weight: 700;
   line-height: 0.95;
   color: #000000;
+
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.developers__link:hover .developers__icon,
+.developers__link:focus .developers__icon {
+  fill: #46c1ae;
+}
+
+.developers__link:active .developers__icon {
+  fill: #46c1ae;
+}
+
+.developers__icon {
+  width: 40px;
+  height: 42px;
+
+  margin-left: 0;
+
+  fill: #63d1bb;
+}
+
+@media (min-width: @tablet-width) {
+  // .developers {
+  //   margin-left: 100px;
+  // }
 }

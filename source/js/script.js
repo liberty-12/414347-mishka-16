@@ -14,3 +14,19 @@ navButton.addEventListener("click", function(evt) {
     nav.classList.remove("navigation--opened");
   }
 });
+
+var cartPopup = document.querySelector(".cart-popup");
+var indexButton = document.querySelector(".best-product__button");
+var catalogButton = document.querySelector(".catalog__icon");
+
+indexButton.addEventListener("click", function(evt) {
+  evt.preventDefault();
+
+  cartPopup.classList.remove("cart-popup--hidden");
+});
+
+catalogButton.addEventListener("click", function(evt) {
+  evt.preventDefault();
+
+  cartPopup.classList.remove("cart-popup--hidden");
+});

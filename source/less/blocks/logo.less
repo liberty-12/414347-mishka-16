@@ -1,7 +1,22 @@
 .logo {
-  padding: 22px 0;
+  padding: 20px 0;
 
   text-align: center;
+}
+
+.logo__link {
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+
+    cursor: pointer;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+
+    cursor: pointer;
+  }
 }
 
 .logo__image {
@@ -9,10 +24,26 @@
   height: 35px;
 }
 
+.logo__footer-icon {
+  width: 102px;
+  height: 35px;
+}
+
+.logo__link[href] .logo__footer-icon {
+  &:hover,
+  &:focus {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .logo {
-    padding: 20px 51px;
-    margin-right: 165px;
+    padding: 20px 49px;
+    margin-right: 160px;
   }
 
   .logo__image {
