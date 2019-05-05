@@ -49,7 +49,7 @@
           <li class="navigation__item navigation__item--loupe">
             <a class="navigation__link" href="#">
               <svg class="navigation__icon navigation__icon--loupe" width="18" height="18">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
+                <use xlink:href="#icon-search"></use>
               </svg>
               Поиск по сайту
             </a>
@@ -57,7 +57,7 @@
           <li class="navigation__item navigation__item--cart">
             <a class="navigation__link" href="#">
               <svg class="navigation__icon navigation__icon--cart" width="20.294px" height="18.849px">
-                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                <use xlink:href="#icon-cart"></use>
               </svg>
               Корзина: пока пуста
             </a>
@@ -145,7 +145,7 @@
             <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
           </picture>
           <span class="best-product__price">Цена: 990 руб.</span>
-          <a class="best-product__button button" href="order-form.html">Заказать</a>
+          <a class="best-product__button button js-popup-button" href="order-form.html">Заказать</a>
         </div>
       </div>
     </section>
@@ -267,33 +267,34 @@
   </footer>
 
   <section class="cart-popup cart-popup--hidden">
-    <div class="cart-popup__container">
-      <div class="cart-popup__wrapper">
-        <h2 class="cart-popup__title">Добавить в корзину</h2>
-        <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="cart-popup__size">
-            <legend class="cart-popup__heading">Выберите размер:</legend>
-            <ul class="cart-popup__size-list">
-              <li class="cart-popup__size-item">
-                <input class="cart-popup__input" type="radio" name="size" id="size_s" checked="">
-                <label class="cart-popup__label" for="size_s">S</label>
-              </li>
-              <li class="cart-popup__size-item">
-                <input class="cart-popup__input" type="radio" name="size" id="size_m">
-                <label class="cart-popup__label" for="size_m">M</label>
-              </li>
-              <li class="cart-popup__size-item">
-                <input class="cart-popup__input" type="radio" name="size" id="size_l">
-                <label class="cart-popup__label" for="size_l">L</label>
-              </li>
-            </ul>
-            <button class="cart-popup__button button" type="submit">Добавить</button>
-          </fieldset>
-        </form>
-      </div>
+    <div class="cart-popup__wrapper">
+      <h2 class="cart-popup__title">Добавить в корзину</h2>
+      <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="cart-popup__size">
+          <legend class="cart-popup__heading">Выберите размер:</legend>
+          <ul class="cart-popup__size-list">
+            <li class="cart-popup__size-item">
+              <input class="cart-popup__input" type="radio" name="size" id="size_s" checked="">
+              <label class="cart-popup__label" for="size_s">S</label>
+            </li>
+            <li class="cart-popup__size-item">
+              <input class="cart-popup__input" type="radio" name="size" id="size_m">
+              <label class="cart-popup__label" for="size_m">M</label>
+            </li>
+            <li class="cart-popup__size-item">
+              <input class="cart-popup__input" type="radio" name="size" id="size_l">
+              <label class="cart-popup__label" for="size_l">L</label>
+            </li>
+          </ul>
+          <button class="cart-popup__button button" type="submit">Добавить</button>
+        </fieldset>
+      </form>
     </div>
   </section>
+  <div class="overlay overlay--hidden"></div>
 
+  <!-- <script src="/path/to/svg4everybody.js"></script>
+  <script>svg4everybody();</script> -->
   <script src="js/script.js"></script>
 </body>
 
