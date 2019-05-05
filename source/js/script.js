@@ -1,3 +1,5 @@
+// Open/close navigation menu on mobile
+
 var nav = document.querySelector(".navigation");
 var navButton = document.querySelector(".navigation__toggle");
 
@@ -15,18 +17,39 @@ navButton.addEventListener("click", function(evt) {
   }
 });
 
-var cartPopup = document.querySelector(".cart-popup");
-var indexButton = document.querySelector(".best-product__button");
-var catalogButton = document.querySelector(".catalog__icon");
+// Open/close popup on index and catalog pages
 
-indexButton.addEventListener("click", function(evt) {
-  evt.preventDefault();
+var popupCart = document.querySelector(".cart-popup");
+var popupOverlay = document.querySelector(".overlay");
+var openButton = document.querySelectorAll(".js-popup-button");
+var closeButton = document.querySelector(".cart-popup__button");
 
-  cartPopup.classList.remove("cart-popup--hidden");
+
+for (var i = 0; i < openButton.length; i++){
+  openButton[i].addEventListener("click", function (event) {
+    event.preventDefault();
+    popupCart.classList.remove("cart-popup--hidden");
+    popupOverlay.classList.remove("overlay--hidden");
+  });
+}
+
+closeButton.addEventListener("click", funct-ion (event) {
+  event.preventDefault();
+  popupCart.classList.add("cart-popup--hidden");
+  popupOverlay.classList.add("overlay--hidden");
 });
 
-catalogButton.addEventListener("click", function(evt) {
-  evt.preventDefault();
+popupOverlay.addEventListener("click", function (event) {
+  event.preventDefault();
+  popupCart.classList.add("cart-popup--hidden");
+  popupOverlay.classList.add("overlay--hidden");
+});
 
-  cartPopup.classList.remove("cart-popup--hidden");
+window.addEventListener("keydown", function (event) {
+  if (event.keyCode === 27) {
+    if (!popupCart.classList.contains("cart-popup--hidden")) {
+      popupCart.classList.add("cart-popup--hidden");
+      popupOverlay.classList.add("overlay--hidden");
+    }
+  }
 });
